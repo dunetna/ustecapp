@@ -6,10 +6,3 @@ Vue.material.registerTheme('default', {
 		  hue: 'A700'
 	  }
 	})
-
-var app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Testing Vue'
-  }
-})
