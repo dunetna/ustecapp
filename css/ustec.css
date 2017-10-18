@@ -1,0 +1,31 @@
+.main-content{
+	width:90%;
+	margin: 15px auto 0;
+}
+
+hr {
+	color: #af7e55;
+}
+
+.tag{
+	width: 6em;
+	float: left;
+	padding-left: 3px;
+	margin-right: 5px;
+}
+
+.tag1 {
+	background-color: #84dd5d;
+}
+
+.tag2 {
+	background-color: #fd9ca3;
+}
+
+.tag3 {
+	background-color: #ffdf64;
+}
+
+.tag4 {
+	background-color: #fd9ca3;
+}
