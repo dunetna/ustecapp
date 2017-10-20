@@ -34,7 +34,10 @@ var App = new Vue({
     get_entry: function (pk) {
     	for (i=0; i< this.entries.length; i++){
         	if(this.entries[i].pk == pk){
-        		this.entry_text = this.entries[i].body;
+        		if (this.entries[i].body != '')
+        			this.entry_text = "<h2>" + this.entries[i].summary + "</h2>" + this.entries[i].body;
+        		else
+        			this.entry_text = this.entries[i].summary;
         		break;
         	}
         }
