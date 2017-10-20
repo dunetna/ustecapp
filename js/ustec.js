@@ -13,6 +13,8 @@ var App = new Vue({
   el: '#app',
   data: {
     entries: [], // initialize empty array
+    entries_list_visible: true,
+    entry_visible: false
   },
   mounted() { // when the Vue app is booted up, this is run automatically.
     var self = this // create a closure to access component in the callback below
