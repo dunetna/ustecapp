@@ -28,7 +28,7 @@
 </head>
 <body>
 	<div id="app">
-		<md-toolbar class="md-medium"> <span style="flex: 1"><img
+		<md-toolbar class="md-medium"> <span style="flex: 1" v-on:click="go_home"><img
 			src="img/logo_ustec_transparent_small.png" /></span> <md-button
 			class="md-icon-button"> <md-icon class="md-size-2x">more_vert</md-icon>
 		</md-button> </md-toolbar>
@@ -36,7 +36,7 @@
 		<div id="entries-list" class="main-content" v-if="entries_list_visible">
 			<div v-for="entry in entries">
 			    <hr>
-			    <div v-bind:id="'e' + entry.pk">
+			    <div v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
 					<div class="tag tag1">USTEC</div>
 					<span v-html="entry.summary"></span>
 				</div>
@@ -44,7 +44,9 @@
 			<hr>
 		</div>
 		<div id="entry" class="main-content" v-if="entry_visible">
-			test
+			<div v-on:click="go_home"><md-button
+			class="md-icon-button"><md-icon>home</md-icon></md-button></div>
+			<div v-html="entry_text"></div>
 		</div>		
 	</div>
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
