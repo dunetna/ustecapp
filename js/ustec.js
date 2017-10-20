@@ -7,7 +7,9 @@ Vue.material.registerTheme('default', {
 	  }
 	})
 	
-var dataURL = 'http://localhost:8000/json';
+var protocol = 'http://'
+var host = 'localhost:8000'
+var dataURL = protocol + host + '/json';
 
 var App = new Vue({
   el: '#app',
@@ -21,6 +23,11 @@ var App = new Vue({
     var self = this // create a closure to access component in the callback below
     $.getJSON(dataURL, function(data) {
       self.entries = data;
+      // Add host to images URL
+      for (i=0; i< self.entries.length; i++){
+    	self.entries[i].summary = self.entries[i].summary.replace("/media", protocol + host + "/media");
+    	self.entries[i].body = self.entries[i].body.replace("/media", protocol + host + "/media");
+      }
     });
   },
   methods: {
