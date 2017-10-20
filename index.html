@@ -36,7 +36,7 @@
 		<div class="main-content">
 			<div v-for="entry in entries">
 			    <hr>
-				<div class="tag tag1">USTEC</div> {{ entry.summary }}
+				<div class="tag tag1">USTEC</div><span v-html="entry.summary"></span>
 			</div>
 			<hr>
 		</div>
