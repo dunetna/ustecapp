@@ -33,13 +33,17 @@
 			class="md-icon-button"> <md-icon class="md-size-2x">more_vert</md-icon>
 		</md-button> </md-toolbar>
 
-		<div class="main-content">
+		<div id="entries-list" class="main-content">
 			<div v-for="entry in entries">
 			    <hr>
-				<div class="tag tag1">USTEC</div><span v-html="entry.summary"></span>
+			    <div v-bind:id="'e' + entry.pk">
+					<div class="tag tag1">USTEC</div>
+					<span v-html="entry.summary"></span>
+				</div>
 			</div>
 			<hr>
 		</div>
+		
 	</div>
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 	<script src="js/ustec.js" type="text/javascript"></script>
