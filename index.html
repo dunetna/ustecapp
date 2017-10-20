@@ -44,8 +44,8 @@
 			<hr>
 		</div>
 		<div id="entry" class="main-content" v-if="entry_visible">
-			<div v-on:click="go_home"><md-button
-			class="md-icon-button"><md-icon>home</md-icon></md-button></div>
+			<div class="back" v-on:click="go_home"><md-button
+			class="md-icon-button"><md-icon>arrow_back</md-icon></md-button></div>
 			<div v-html="entry_text"></div>
 		</div>		
 	</div>
