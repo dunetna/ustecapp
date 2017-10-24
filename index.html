@@ -36,7 +36,13 @@
 		<div id="entries-list" class="main-content" v-if="entries_list_visible">
 			<div v-for="entry in entries">
 			    <hr>
-			    <div v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
+			    <div v-if="entry.body != ''" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
+			    	<div v-for="tag in entry.tags">
+						<div class="tag" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
+					</div>
+					<span v-html="entry.summary"></span>
+				</div>
+				<div v-else v-bind:id="'e' + entry.pk">
 			    	<div v-for="tag in entry.tags">
 						<div class="tag" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
 					</div>
