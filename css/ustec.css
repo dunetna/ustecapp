@@ -17,6 +17,10 @@ hr {
 	float: left;
 }
 
+.tag_filter{
+	display: inline-block;
+}
+
 .back {
 	text-align: right;
 }

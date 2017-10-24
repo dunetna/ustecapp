@@ -58,7 +58,10 @@
 		</div>
 		<div id="filter" class="main-content" v-if="filter_visible">
 			<div v-for="tag in tags">
-				<p class="tag" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</p>
+				<p>
+					<md-switch class="md-primary"></md-switch> 
+					<span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
+				</p>
 			</div>
 		</div>		
 	</div>
