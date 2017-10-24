@@ -34,19 +34,21 @@
 		</md-button> </md-toolbar>
 
 		<div id="entries-list" class="main-content" v-if="entries_list_visible">
-			<div v-for="entry in entries">
-			    <hr>
-			    <div v-if="entry.body != ''" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
-			    	<div v-for="tag in entry.tags">
-						<div class="tag tag_entry" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
+			<div v-for="entry in entries">			    
+			    <div v-if="show_entry(entry)">
+			    	<hr>
+				    <div v-if="entry.body != ''" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
+				    	<div v-for="tag in entry.tags">
+							<div class="tag tag_entry" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
+						</div>
+						<span v-html="entry.summary"></span>
 					</div>
-					<span v-html="entry.summary"></span>
-				</div>
-				<div v-else v-bind:id="'e' + entry.pk">
-			    	<div v-for="tag in entry.tags">
-						<div class="tag tag_entry" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
+					<div v-else v-bind:id="'e' + entry.pk">
+				    	<div v-for="tag in entry.tags">
+							<div class="tag tag_entry" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
+						</div>
+						<span v-html="entry.summary"></span>
 					</div>
-					<span v-html="entry.summary"></span>
 				</div>
 			</div>
 			<hr>
