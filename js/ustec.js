@@ -35,6 +35,9 @@ var App = new Vue({
     });
     $.getJSON(tags_URL, function(data) {
         self.tags = data;
+        for (i=0; i< self.tags.length; i++){
+        	self.tags[i].checked = false;
+        }
     });
   },
   methods: {
