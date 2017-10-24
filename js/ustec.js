@@ -9,7 +9,7 @@ Vue.material.registerTheme('default', {
 	
 var protocol = 'http://'
 var host = 'localhost:8000'
-var dataURL = protocol + host + '/json';
+var important_entries_URL = protocol + host + '/json/important_entries';
 
 var App = new Vue({
   el: '#app',
@@ -23,7 +23,7 @@ var App = new Vue({
   mounted() { // when the Vue app is booted up, this is run automatically.
     var self = this // create a closure to access component in the callback below
     // Get all entries from server
-    $.getJSON(dataURL, function(data) {
+    $.getJSON(important_entries_URL, function(data) {
       self.entries = data;
       // Add host to images URL
       for (i=0; i< self.entries.length; i++){
