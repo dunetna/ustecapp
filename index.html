@@ -30,7 +30,7 @@
 	<div id="app">
 		<md-toolbar class="md-medium"> <span style="flex: 1" v-on:click="go_home"><img
 			src="img/logo_ustec_transparent_small.png" /></span> <md-button
-			class="md-icon-button"> <md-icon class="md-size-2x">more_vert</md-icon>
+			class="md-icon-button"v-on:click="filter"> <md-icon class="md-size-2x">more_vert</md-icon>
 		</md-button> </md-toolbar>
 
 		<div id="entries-list" class="main-content" v-if="entries_list_visible">
@@ -55,6 +55,9 @@
 			<div v-html="entry_text"></div>
 			<div class="back" v-on:click="go_home"><md-button
 			class="md-icon-button"><md-icon>arrow_back</md-icon></md-button></div>
+		</div>
+		<div id="filter" class="main-content" v-if="filter_visible">
+			filters
 		</div>		
 	</div>
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
