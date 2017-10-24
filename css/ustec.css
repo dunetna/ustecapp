@@ -9,9 +9,12 @@ hr {
 
 .tag{
 	width: 6em;
-	float: left;
 	padding-left: 3px;
 	margin-right: 5px;
+}
+
+.tag_entry{
+	float: left;
 }
 
 .back {

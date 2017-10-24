@@ -10,12 +10,14 @@ Vue.material.registerTheme('default', {
 var protocol = 'http://'
 var host = 'localhost:8000'
 var important_entries_URL = protocol + host + '/json/important_entries';
+var tags_URL = protocol + host + '/json/tags';
 
 var App = new Vue({
   el: '#app',
   data: {
     entries: [], // empty array for all entries
     entry_text: "", // current clicked entry
+    tags: [], // empty array for all tags
     entries_list_visible: true, // flag that indicates if we are in main page
     entry_visible: false, // flag that indicates if we are viewing an entry
     filter_visible: false
@@ -30,6 +32,9 @@ var App = new Vue({
     	self.entries[i].summary = self.entries[i].summary.replace("/media", protocol + host + "/media");
     	self.entries[i].body = self.entries[i].body.replace("/media", protocol + host + "/media");
       }
+    });
+    $.getJSON(tags_URL, function(data) {
+        self.tags = data;
     });
   },
   methods: {
