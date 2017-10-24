@@ -37,7 +37,9 @@
 			<div v-for="entry in entries">
 			    <hr>
 			    <div v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
-					<div class="tag tag1">USTEC</div>
+			    	<div v-for="tag in entry.tags">
+						<div class="tag" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
+					</div>
 					<span v-html="entry.summary"></span>
 				</div>
 			</div>
