@@ -33,10 +33,14 @@ var App = new Vue({
     	self.entries[i].body = self.entries[i].body.replace("/media", protocol + host + "/media");
       }
     });
+    // Get all tags
     $.getJSON(tags_URL, function(data) {
         self.tags = data;
+        // Add an attribute to each tag to set if it is checked or not in filters
+        // By default, it is checked
+        // TODO: save this filters in local storage
         for (i=0; i< self.tags.length; i++){
-        	self.tags[i].checked = false;
+        	self.tags[i].checked = true;
         }
     });
   },
@@ -75,5 +79,22 @@ var App = new Vue({
         this.entry_visible = false;
         this.filter_visible = true;
     },
+    // Check if an entry must be visible or not, 
+    // depending on the filters (tags checked or not)
+    show_entry: function(entry){
+    	// Loop all tags of this entry
+    	for(i=0; i<entry.tags.length; i++){
+    		// Loop all tags
+    		for(j=0; j<this.tags.length; j++){
+    			// If the entry has this tag and the tag is checked, show the entry
+    			if(entry.tags[i].name == this.tags[j].name && 
+    			   this.tags[j].checked == true){
+    				return true;
+    			}
+    		}
+    	}
+    	// If any tag of this entry is checked, do not show the entry
+    	return false;    	
+    }
   }
 })
