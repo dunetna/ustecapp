@@ -22,28 +22,31 @@ var App = new Vue({
     entry_visible: false, // flag that indicates if we are viewing an entry
   },
   mounted() { // when the Vue app is booted up, this is run automatically.
-    var self = this // create a closure to access component in the callback below
-    // Get all entries from server
-    $.getJSON(important_entries_URL, function(data) {
-      self.entries = data;
-      // Add host to images URL
-      for (i=0; i< self.entries.length; i++){
-    	self.entries[i].summary = self.entries[i].summary.replace("/media", protocol + host + "/media");
-    	self.entries[i].body = self.entries[i].body.replace("/media", protocol + host + "/media");
-      }
-    });
-    // Get all tags
-    $.getJSON(tags_URL, function(data) {
-        self.tags = data;
-        // Add an attribute to each tag to set if it is checked or not in filters
-        // By default, it is checked
-        // TODO: save this filters in local storage
-        for (i=0; i< self.tags.length; i++){
-        	self.tags[i].checked = true;
-        }
-    });
+	  this.refresh();
   },
   methods: {
+	refresh: function() {
+		var self = this // create a closure to access component in the callback below
+	    // Get all entries from server
+	    $.getJSON(important_entries_URL, function(data) {
+	      self.entries = data;
+	      // Add host to images URL
+	      for (i=0; i< self.entries.length; i++){
+	    	self.entries[i].summary = self.entries[i].summary.replace("/media", protocol + host + "/media");
+	    	self.entries[i].body = self.entries[i].body.replace("/media", protocol + host + "/media");
+	      }
+	    });
+	    // Get all tags
+	    $.getJSON(tags_URL, function(data) {
+	        self.tags = data;
+	        // Add an attribute to each tag to set if it is checked or not in filters
+	        // By default, it is checked
+	        // TODO: save this filters in local storage
+	        for (i=0; i< self.tags.length; i++){
+	        	self.tags[i].checked = true;
+	        }
+	    });
+	},
 	// Get clicked entry
     get_entry: function (pk) {
     	// Search clicked entry
