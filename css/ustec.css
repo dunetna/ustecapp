@@ -24,3 +24,7 @@ hr {
 .back {
 	text-align: right;
 }
+
+.md-sidenav-content {
+	max-width: 200px !important;
+}

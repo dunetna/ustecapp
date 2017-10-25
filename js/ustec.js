@@ -20,7 +20,6 @@ var App = new Vue({
     tags: [], // empty array for all tags
     entries_list_visible: true, // flag that indicates if we are in main page
     entry_visible: false, // flag that indicates if we are viewing an entry
-    filter_visible: false
   },
   mounted() { // when the Vue app is booted up, this is run automatically.
     var self = this // create a closure to access component in the callback below
@@ -63,21 +62,17 @@ var App = new Vue({
     	// Show clicked entry  
     	this.entries_list_visible = false;
         this.entry_visible = true;
-        this.filter_visible = false;
     },
     // Go to main page
     go_home: function () {
     	// Show list of entries
     	this.entries_list_visible = true;
         this.entry_visible = false;
-        this.filter_visible = false;
     },
     // Go to main page
     filter: function () {
     	// Show filters
-    	this.entries_list_visible = false;
-        this.entry_visible = false;
-        this.filter_visible = true;
+    	this.$refs.rightSidenav.open();
     },
     // Check if an entry must be visible or not, 
     // depending on the filters (tags checked or not)
@@ -95,6 +90,10 @@ var App = new Vue({
     	}
     	// If any tag of this entry is checked, do not show the entry
     	return false;    	
+    },
+    refresh_list: function(){
+    	this.entries_list_visible = false;
+    	this.entries_list_visible = true;
     }
   }
 })
