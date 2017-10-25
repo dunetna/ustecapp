@@ -30,9 +30,23 @@
 	<div id="app">
 		<md-toolbar class="md-medium"> <span style="flex: 1" v-on:click="go_home"><img
 			src="img/logo_ustec_transparent_small.png" /></span> <md-button
-			class="md-icon-button"v-on:click="filter"> <md-icon class="md-size-2x">more_vert</md-icon>
+			class="md-icon-button" v-on:click="filter"> <md-icon class="md-size-2x">more_vert</md-icon>
 		</md-button> </md-toolbar>
-
+		<md-sidenav class="md-right" md-swipe-distance="200" ref="rightSidenav" v-on:close="refresh_list">
+	        <md-toolbar>
+	      		<div class="md-toolbar-container">
+	        		<h3 class="md-title">Filtres</h3>
+	      		</div>
+	    	</md-toolbar>
+			<div id="filter" class="main-content">
+				<div v-for="tag in tags">
+					<p>
+						<md-switch v-model="tag.checked" class="md-primary"></md-switch> 
+						<span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
+					</p>
+				</div>
+			</div>
+		</md-sidenav>
 		<div id="entries-list" class="main-content" v-if="entries_list_visible">
 			<div v-for="entry in entries">			    
 			    <div v-if="show_entry(entry)">
@@ -58,14 +72,6 @@
 			<div class="back" v-on:click="go_home"><md-button
 			class="md-icon-button"><md-icon>arrow_back</md-icon></md-button></div>
 		</div>
-		<div id="filter" class="main-content" v-if="filter_visible">
-			<div v-for="tag in tags">
-				<p>
-					<md-switch v-model="tag.checked" class="md-primary"></md-switch> 
-					<span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
-				</p>
-			</div>
-		</div>		
 	</div>
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 	<script src="js/ustec.js" type="text/javascript"></script>
