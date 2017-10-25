@@ -22,10 +22,10 @@ var App = new Vue({
     entry_visible: false, // flag that indicates if we are viewing an entry
   },
   mounted() { // when the Vue app is booted up, this is run automatically.
-	  this.refresh();
+	  this.refresh(true);
   },
   methods: {
-	refresh: function() {
+	refresh: function(reset_filters) {
 		var self = this // create a closure to access component in the callback below
 	    // Get all entries from server
 	    $.getJSON(important_entries_URL, function(data) {
@@ -38,14 +38,29 @@ var App = new Vue({
 	    });
 	    // Get all tags
 	    $.getJSON(tags_URL, function(data) {
+	    	current_tags = self.tags;
 	        self.tags = data;
-	        // Add an attribute to each tag to set if it is checked or not in filters
-	        // By default, it is checked
-	        // TODO: save this filters in local storage
-	        for (i=0; i< self.tags.length; i++){
-	        	self.tags[i].checked = true;
+	        self.reset_filters();
+	        // Get previous values of existent tags and set if they were checked or not
+	        // TODO: save filters in local storage
+	        if(reset_filters == false){
+	        	for (i=0; i<self.tags.length; i++){
+	        		for (j=0; j<current_tags.length; j++){
+	        			if(self.tags[i].name == current_tags[j].name){
+	        				self.tags[i].checked = current_tags[j].checked;
+	        			}
+	        		}
+	        	}
 	        }
 	    });
+	},
+	reset_filters: function () {
+		// Add an attribute to each tag to set if it is checked or not in filters
+        // By default, it is checked
+        // TODO: save filters in local storage
+		for (i=0; i< this.tags.length; i++){
+        	this.tags[i].checked = true;
+        }
 	},
 	// Get clicked entry
     get_entry: function (pk) {
