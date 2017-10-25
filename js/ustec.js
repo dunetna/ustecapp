@@ -112,6 +112,9 @@ var App = new Vue({
     refresh_list: function(){
     	this.entries_list_visible = false;
     	this.entries_list_visible = true;
+    },
+    save_filters: function(){
+    	localStorage.setItem("tags", JSON.stringify(this.tags));
     }
   }
 })

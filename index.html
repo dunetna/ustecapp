@@ -35,7 +35,7 @@
 				<md-icon class="md-size-2x">arrow_back</md-icon>
 			</md-button>
 		</md-toolbar>
-		<md-sidenav class="md-right" md-swipe-distance="200" ref="rightSidenav">
+		<md-sidenav class="md-right" v-on:close="save_filters" ref="rightSidenav">
 	        <md-toolbar>
 	      		<div class="md-toolbar-container">
 	        		<h3 class="md-title">Filtres</h3>
