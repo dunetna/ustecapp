@@ -29,7 +29,7 @@
 				<md-icon class="md-size-2x">more_vert</md-icon>
 			</md-button>
 		</md-toolbar>
-		<md-sidenav class="md-right" md-swipe-distance="200" ref="rightSidenav" v-on:close="refresh_list">
+		<md-sidenav class="md-right" md-swipe-distance="200" ref="rightSidenav">
 	        <md-toolbar>
 	      		<div class="md-toolbar-container">
 	        		<h3 class="md-title">Filtres</h3>
@@ -38,7 +38,7 @@
 			<div id="filter" class="main-content">
 				<div v-for="tag in tags">
 					<p>
-						<md-switch v-model="tag.checked" class="md-primary"></md-switch> 
+						<md-switch v-model="tag.checked" v-on:change="refresh_list" class="md-primary"></md-switch> 
 						<span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
 					</p>
 				</div>
