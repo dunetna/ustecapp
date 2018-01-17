@@ -25,7 +25,7 @@ var App = new Vue({
 	  this.refresh(true);
   },
   methods: {
-	refresh: function(reset_filters) {
+	refresh: function() {
 		var self = this // create a closure to access component in the callback below
 	    // Get all entries from server
 	    $.getJSON(important_entries_URL, function(data) {
@@ -38,17 +38,14 @@ var App = new Vue({
 	    });
 	    // Get all tags
 	    $.getJSON(tags_URL, function(data) {
-	    	current_tags = self.tags;
+	    	stored_tags = JSON.parse(localStorage.getItem("tags"));
 	        self.tags = data;
 	        self.reset_filters();
 	        // Get previous values of existent tags and set if they were checked or not
-	        // TODO: save filters in local storage
-	        if(reset_filters == false){
-	        	for (i=0; i<self.tags.length; i++){
-	        		for (j=0; j<current_tags.length; j++){
-	        			if(self.tags[i].name == current_tags[j].name){
-	        				self.tags[i].checked = current_tags[j].checked;
-	        			}
+	        for (i=0; i<self.tags.length; i++){
+	        	for (j=0; j<stored_tags.length; j++){
+	        		if(self.tags[i].name == stored_tags[j].name){
+	        			self.tags[i].checked = stored_tags[j].checked;
 	        		}
 	        	}
 	        }
