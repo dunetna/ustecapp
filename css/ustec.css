@@ -35,3 +35,8 @@ hr {
 	position:relative;
 	height:100vh;
 }
+
+/* Make image button 100% visible */
+.md-button{
+	overflow: visible;
+}
