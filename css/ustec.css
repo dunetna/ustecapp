@@ -28,3 +28,10 @@ hr {
 .md-sidenav-content {
 	max-width: 60% !important;
 }
+
+/* Prevent scroll horizontally to view menu when it's not loaded */
+#app{
+	overflow-x: hidden;
+	position:relative;
+	height:100vh;
+}
