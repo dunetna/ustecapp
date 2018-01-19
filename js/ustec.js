@@ -4,11 +4,15 @@ Vue.material.registerTheme('default', {
 	  primary: {
 		  color: 'lime',
 		  hue: 'A700'
+	  },
+	  accent: {
+		  color: 'blue',
+		  hue: '900'
 	  }
 	})
 	
 var protocol = 'http://'
-var host = 'main.sindicat.net'
+var host = 'localhost:8000'
 var important_entries_URL = protocol + host + '/json/important_entries';
 var tags_URL = protocol + host + '/json/tags';
 
