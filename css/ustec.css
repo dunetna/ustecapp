@@ -40,3 +40,8 @@ hr {
 .md-button{
 	overflow: visible;
 }
+
+/* To see tag background with normal height */ 
+.md-switch .md-switch-label {
+	line-height: normal;
+}

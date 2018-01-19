@@ -45,8 +45,9 @@
 			<div id="filter" class="main-content">
 				<div v-for="tag in tags">
 					<p>
-						<md-switch v-model="tag.checked" v-on:change="refresh_list" class="md-primary"></md-switch> 
-						<span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
+						<md-switch v-model="tag.checked" v-bind:id="tag.name" class="md-primary" v-on:change="refresh_list">
+							<span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
+						</md-switch>
 					</p>
 				</div>
 			</div>
