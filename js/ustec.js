@@ -26,7 +26,7 @@ var App = new Vue({
     entry_visible: false, // flag that indicates if we are viewing an entry
   },
   mounted() { // when the Vue app is booted up, this is run automatically.
-	  this.refresh(true);
+	  this.refresh();
   },
   methods: {
 	refresh: function() {
