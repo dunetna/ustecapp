@@ -35,7 +35,7 @@
 		</md-toolbar>
 		<md-sidenav class="md-right" v-on:close="save_filters" ref="rightSidenav">
 			<div id="buttons" style="text-align: center">
-				<md-button class="md-fab md-mini md-primary">
+				<md-button class="md-fab md-mini md-primary" v-on:click="openDialog('infodialog')">
 					<md-icon>info</md-icon>
 				</md-button>
 				<a href="mailto:barcelona@sindicat.net">
@@ -46,6 +46,13 @@
 				<md-button class="md-fab md-mini md-primary" v-on:click="refresh">
 					<md-icon>cached</md-icon>
 				</md-button>
+				<md-dialog-alert
+ 					:md-title="info.title"
+  					:md-content-html="info.body"
+  					@open="onOpen"
+  					@close="onClose"
+  					ref="infodialog">
+				</md-dialog-alert>
 			</div>
 	        <md-toolbar class="md-dense">
 	      		<div class="md-toolbar-container">
