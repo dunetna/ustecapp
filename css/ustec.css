@@ -44,6 +44,7 @@ hr {
 /* Make image button 100% visible */
 .md-button{
 	overflow: visible;
+	vertical-align: middle;
 }
 
 /* To see tag background with normal height */ 

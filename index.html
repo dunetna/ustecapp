@@ -38,11 +38,9 @@
 				<md-button class="md-fab md-mini md-primary" v-on:click="openDialog('infodialog')">
 					<md-icon>info</md-icon>
 				</md-button>
-				<a href="mailto:barcelona@sindicat.net">
-					<md-button class="md-fab md-mini md-primary">
-						<md-icon>email</md-icon>
-					</md-button>
-				</a>
+				<md-button class="md-fab md-mini md-primary" v-on:click="openDialog('contactdialog')">
+					<md-icon>email</md-icon>
+				</md-button>
 				<md-button class="md-fab md-mini md-primary" v-on:click="refresh">
 					<md-icon>cached</md-icon>
 				</md-button>
@@ -51,6 +49,48 @@
   					:md-content-html="info.body"
   					ref="infodialog">
 				</md-dialog-alert>
+				<md-dialog ref="contactdialog">
+  					<md-dialog-title>Contacte</md-dialog-title>
+					<md-dialog-content>
+						<a href="mailto:barcelona@sindicat.net">
+							<md-button class="md-fab md-mini md-primary">
+								<md-icon>email</md-icon>
+							</md-button>
+							Barcelona
+						</a>
+						<br />
+						<a href="mailto:girona@sindicat.net">
+							<md-button class="md-fab md-mini md-primary">
+								<md-icon>email</md-icon>
+							</md-button>
+							Girona
+						</a>
+						<br />
+						<a href="mailto:lleida@sindicat.net">
+							<md-button class="md-fab md-mini md-primary">
+								<md-icon>email</md-icon>
+							</md-button>
+							Lleida
+						</a>
+						<br />
+						<a href="mailto:tarragona@sindicat.net">
+							<md-button class="md-fab md-mini md-primary">
+								<md-icon>email</md-icon>
+							</md-button>
+							Tarragona
+						</a>
+						<br />
+						<a href="mailto:tortosa@sindicat.net">
+							<md-button class="md-fab md-mini md-primary">
+								<md-icon>email</md-icon>
+							</md-button>
+							Tortosa
+						</a>
+					</md-dialog-content>					
+					<md-dialog-actions>						
+						<md-button class="md-primary" @click="closeDialog('contactdialog')">Ok</md-button>
+					</md-dialog-actions>
+				</md-dialog>
 			</div>
 	        <md-toolbar class="md-dense">
 	      		<div class="md-toolbar-container">
