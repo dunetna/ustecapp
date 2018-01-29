@@ -44,10 +44,30 @@
 				<md-button class="md-fab md-mini md-primary" v-on:click="refresh">
 					<md-icon>cached</md-icon>
 				</md-button>
-				<md-dialog-alert
- 					:md-title="info.title"
-  					:md-content-html="info.body"
-  					ref="infodialog">
+				<md-dialog ref="infodialog">
+					<md-dialog-title>USTECApp</md-dialog-title>
+					<md-dialog-content>
+						Versió 0.1<br /><br />
+						<strong>USTECApp</strong> és una aplicació que notifica d'aquells esdeveniments importants
+						relacionats amb el professorat. Es poden filtrar les notícies segons 
+						els interessos de l'usuari.<br /><br />
+						<div style='font-size: x-small'>
+							Copyright 2018 Mònica Ramírez Arceda <monica@sindicat.net><br/><br/>
+							This program is free software: you can redistribute it and/or modify 
+							it under the terms of the GNU General Public License as published by 
+							the Free Software Foundation, either version 3 of the License, or 
+							(at your option) any later version.<br/><br/>
+							This program is distributed in the hope that it will be useful, 
+							but WITHOUT ANY WARRANTY; without even the implied warranty of 
+							MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the 
+							GNU General Public License for more details. 
+							You should have received a copy of the GNU General Public License 
+							along with this program.  If not, see http://www.gnu.org/licenses.
+						</div>
+					</md-dialog-content>					
+					<md-dialog-actions>						
+						<md-button class="md-primary" @click="closeDialog('infodialog')">Ok</md-button>
+					</md-dialog-actions>
 				</md-dialog-alert>
 				<md-dialog ref="contactdialog">
   					<md-dialog-title>Contacte</md-dialog-title>
