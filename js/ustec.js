@@ -36,13 +36,15 @@ var App = new Vue({
 	refresh: function() {
 		var self = this // create a closure to access component in the callback below
 	    // Get all entries from server
-	    $.getJSON(important_entries_URL, function(data) {
+	    $.when($.getJSON(important_entries_URL, function(data) {
 	      self.entries = data;
 	      // Add host to images URL
 	      for (i=0; i< self.entries.length; i++){
 	    	self.entries[i].summary = self.entries[i].summary.replace("/media", protocol + host + "/media");
 	    	self.entries[i].body = self.entries[i].body.replace("/media", protocol + host + "/media");
 	      }
+	    })).then(function() {
+	    	self.$refs.rightSidenav.close();
 	    });
 	    // Get all tags
 	    $.getJSON(tags_URL, function(data) {
