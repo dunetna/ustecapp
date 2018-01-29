@@ -122,12 +122,12 @@
 					<div>
 						<div v-if="tag.name == 'USTEC'">
 							<md-switch v-model="tag.checked" v-bind:id="tag.name" class="md-primary" v-on:change="refresh_list" disabled>
-								<span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
+								<md-chip v-bind:style="'background-color: ' + tag.color">{{tag.name}}</md-chip>
 							</md-switch>
 						</div>
 						<div v-else>
 							<md-switch v-model="tag.checked" v-bind:id="tag.name" class="md-primary" v-on:change="refresh_list">
-								<span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
+								<md-chip v-bind:style="'background-color: ' + tag.color">{{tag.name}}</md-chip>
 							</md-switch>
 						</div>
 						
@@ -141,15 +141,15 @@
 			    	<hr>
 				    <div v-if="entry.body != ''" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
 				    	<div v-for="tag in entry.tags">
-							<div class="tag tag_entry" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
+							<md-chip v-bind:style="'background-color: ' + tag.color">{{tag.name}}</md-chip>
+							<span v-html="entry.summary"></span>
 						</div>
-						<span v-html="entry.summary"></span>
 					</div>
 					<div v-else v-bind:id="'e' + entry.pk">
 				    	<div v-for="tag in entry.tags">
-							<div class="tag tag_entry" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
+							<md-chip v-bind:style="'background-color: ' + tag.color">{{tag.name}}</md-chip>
+							<span v-html="entry.summary"></span>
 						</div>
-						<span v-html="entry.summary"></span>
 					</div>
 				</div>
 			</div>
