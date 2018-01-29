@@ -24,28 +24,6 @@ var App = new Vue({
     tags: [], // empty array for all tags
     entries_list_visible: true, // flag that indicates if we are in main page
     entry_visible: false, // flag that indicates if we are viewing an entry
-    info: {
-    	title: "USTECApp",
-    	body: "Versió 0.1<br /><br />" +
-    			"<strong>USTECApp</strong> és una aplicació que notifica d'aquells esdeveniments importants" +
-    			" relacionats amb el professorat. Es poden filtrar les notícies segons " +
-    			"els interessos de l'usuari.<br /><br />" +
-    			"<div style='font-size: x-small'>" +
-    			"Copyright 2018 Mònica Ramírez Arceda <monica@sindicat.net>" +
-    			"<br/><br/>" +
-    			"This program is free software: you can redistribute it and/or modify" +
-    			"it under the terms of the GNU General Public License as published by" +
-    			"the Free Software Foundation, either version 3 of the License, or" +
-    			"(at your option) any later version." +
-    			"<br/><br/>" +
-    			"This program is distributed in the hope that it will be useful," +
-    			"but WITHOUT ANY WARRANTY; without even the implied warranty of" +
-    			"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the" +
-    			"GNU General Public License for more details." +
-    			"You should have received a copy of the GNU General Public License" +
-    			"along with this program.  If not, see http://www.gnu.org/licenses." +
-    			"</div>"
-    }
   },
   mounted() { // when the Vue app is booted up, this is run automatically.
 	  this.refresh();
