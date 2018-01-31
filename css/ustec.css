@@ -51,3 +51,7 @@ hr {
 .md-switch .md-switch-label {
 	line-height: normal;
 }
+
+.md-dialog-content p {
+	margin-bottom: 1em;
+}
