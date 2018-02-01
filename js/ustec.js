@@ -36,7 +36,7 @@ Vue.material.registerTheme('default', {
 	})
 	
 var protocol = 'http://'
-var host = 'localhost:8000'
+var host = 'main.sindicat.net'
 var important_entries_URL = protocol + host + '/json/important_entries';
 var tags_URL = protocol + host + '/json/tags';
 
