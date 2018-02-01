@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget id="net.sindicat.ustecapp" version="1.0"
 	xmlns="http://www.w3.org/ns/widgets">
-	
+
 	<name>USTECApp</name>
 	<description>
 		An app that provides the most important news from USTEC
 	</description>
 	<author email="monica@sindicat.net" href="https://sindicat.net">
 		Mònica Ramírez Arceda
-	</author>	
+	</author>
 	<icon src="img/logo_ustec.png" />
-	<content src="index.html" />	
-	
+	<content src="index.html" />
+
 	<preference name="phonegap-version" value="cli-7.0.1" />
 	<preference name="orientation" value="portrait" />
 
 	<plugin name="cordova-plugin-whitelist" />
+	<access origin="*" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<allow-intent href="mailto:*" />
+
 	<plugin name="cordova-plugin-splashscreen" />
 	<splash src="img/splash_ustec.png" />
-	
+
 </widget>
