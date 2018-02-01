@@ -9,13 +9,9 @@ hr {
 }
 
 .tag{
-	width: 7em;
-	padding-left: 3px;
-	margin-right: 5px;
-}
-
-#filter .tag{
 	width: 8em;
+	margin-right: 5px;
+	padding-left: 5px;
 }
 
 .tag_entry{
