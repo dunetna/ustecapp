@@ -15,6 +15,7 @@
 	<preference name="phonegap-version" value="cli-7.0.1" />
 	<preference name="orientation" value="portrait" />
 	<preference name="SplashScreen" value="screen" />
+	<preference name = "SplashMaintainAspectRatio" value = "false" />
 
 	<plugin name="cordova-plugin-whitelist" />
 	<access origin="*" />
