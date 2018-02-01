@@ -13,7 +13,8 @@
 .tag{
 	width: 8em;
 	margin-right: 5px;
-	padding-left: 5px;
+	border-radius: 10px;
+	padding: 5px 10px;
 }
 
 .tag_entry{
@@ -23,16 +24,12 @@
 	border-radius: 25px;
 }
 
-.tag_filter{
-	display: inline-block;
-}
-
 .back {
 	text-align: right;
 }
 
 .md-sidenav-content {
-	max-width: 60% !important;
+	max-width: 70% !important;
 }
 
 /* Prevent scroll horizontally to view menu when it's not loaded */
