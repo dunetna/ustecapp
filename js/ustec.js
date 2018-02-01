@@ -51,10 +51,10 @@ var App = new Vue({
   },
   mounted() { // when the Vue app is booted up, this is run automatically.
 	  this.refresh();
-	  // Refresh news list every 30 seconds
+	  // Refresh news list every minute
 	  setInterval(function () {
 	      this.refresh();
-	  }.bind(this), 30000);
+	  }.bind(this), 60000);
   },
   methods: {
 	refresh: function() {
