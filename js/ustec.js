@@ -22,8 +22,12 @@
  * @licend
  */
 
-Vue.use(VueMaterial)
+var protocol = 'http://'
+var host = 'main.sindicat.net'
+var important_entries_URL = protocol + host + '/json/important_entries';
+var tags_URL = protocol + host + '/json/tags';
 
+Vue.use(VueMaterial)
 Vue.material.registerTheme('default', {
 	  primary: {
 		  color: 'lime',
@@ -34,22 +38,17 @@ Vue.material.registerTheme('default', {
 		  hue: '900'
 	  }
 	})
-	
-var protocol = 'http://'
-var host = 'main.sindicat.net'
-var important_entries_URL = protocol + host + '/json/important_entries';
-var tags_URL = protocol + host + '/json/tags';
 
 var App = new Vue({
   el: '#app',
   data: {
-    entries: [], // empty array for all entries
+    entries: [], 
     entry_text: "", // current clicked entry
-    tags: [], // empty array for all tags
+    tags: [], 
     entries_list_visible: true, // flag that indicates if we are in main page
     entry_visible: false, // flag that indicates if we are viewing an entry
   },
-  mounted() { // when the Vue app is booted up, this is run automatically.
+  mounted() {
 	  this.refresh();
 	  // Refresh news list every minute
 	  setInterval(function () {
@@ -58,7 +57,7 @@ var App = new Vue({
   },
   methods: {
 	refresh: function() {
-		var self = this // create a closure to access component in the callback below
+		var self = this
 	    // Get all entries from server
 	    $.when($.getJSON(important_entries_URL, function(data) {
 	      self.entries = data;
@@ -88,12 +87,10 @@ var App = new Vue({
 	reset_filters: function () {
 		// Add an attribute to each tag to set if it is checked or not in filters
         // By default, it is checked
-        // TODO: save filters in local storage
 		for (i=0; i< this.tags.length; i++){
         	this.tags[i].checked = true;
         }
 	},
-	// Get clicked entry
     get_entry: function (pk) {
     	// Search clicked entry
     	for (i=0; i< this.entries.length; i++){
