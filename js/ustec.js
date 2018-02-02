@@ -61,15 +61,13 @@ var App = new Vue({
         get_entries: function(){
             var self = this;
             // Get all entries from server
-            $.when($.getJSON(important_entries_URL, function(data) {
+            $.getJSON(important_entries_URL, function(data) {
                 self.entries = data;
                 // Add host to images URL
                 for (i=0; i< self.entries.length; i++){
                     self.entries[i].summary = self.entries[i].summary.replace("/media", protocol + host + "/media");
                     self.entries[i].body = self.entries[i].body.replace("/media", protocol + host + "/media");
                 }
-            })).then(function() {
-                self.$refs.rightSidenav.close();
             });
         },
         get_tags: function(){
@@ -124,6 +122,10 @@ var App = new Vue({
         filter: function () {
             // Show menu
             this.$refs.rightSidenav.open();
+        },
+        refresh_close_menu: function(){
+            this.refresh();
+            this.$refs.rightSidenav.close();
         },
         // Check if an entry must be visible or not,
         // depending on the filters (tags checked or not)
