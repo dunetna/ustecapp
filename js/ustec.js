@@ -55,7 +55,11 @@ var App = new Vue({
     },
     methods: {
         refresh: function() {
-            var self = this
+            this.get_entries();
+            this.get_tags();
+        },
+        get_entries: function(){
+            var self = this;
             // Get all entries from server
             $.when($.getJSON(important_entries_URL, function(data) {
                 self.entries = data;
@@ -67,7 +71,9 @@ var App = new Vue({
             })).then(function() {
                 self.$refs.rightSidenav.close();
             });
-            // Get all tags
+        },
+        get_tags: function(){
+            var self = this;
             $.getJSON(tags_URL, function(data) {
                 stored_tags = JSON.parse(localStorage.getItem("tags"));
                 self.tags = data;
