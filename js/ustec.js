@@ -84,8 +84,8 @@ var App = new Vue({
             });
         },
         reset_filters: function () {
-            // Add an attribute to each tag to set if it is checked or not in
-            // filters. By default, it is checked
+            // Add an attribute to each tag in filters to set if they are
+            // checked or not. By default, they are checked.
             for (i=0; i< this.tags.length; i++){
                 this.tags[i].checked = true;
             }
@@ -114,9 +114,9 @@ var App = new Vue({
             this.entries_list_visible = true;
             this.entry_visible = false;
         },
-        // Go to main page
+        // Open menu
         filter: function () {
-            // Show filters
+            // Show menu
             this.$refs.rightSidenav.open();
         },
         // Check if an entry must be visible or not,
