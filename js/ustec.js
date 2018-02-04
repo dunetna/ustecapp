@@ -102,7 +102,7 @@ var App = new Vue({
             // Search clicked entry
             for (i=0; i< this.entries.length; i++){
                 if(this.entries[i].pk == pk){        		
-                    if (this.entries[i].body != ''){
+                    if (this.entries[i].body){
                         // If entry has body, show summary as title and body
                         this.entry_text = "<h2>" + 
                                           this.entries[i].summary + 
@@ -142,7 +142,7 @@ var App = new Vue({
                     // If the entry has this tag and the tag is checked, 
                     // show the entry
                     if(entry.tags[i].name == this.tags[j].name && 
-                            this.tags[j].checked == true){
+                            this.tags[j].checked){
                         return true;
                     }
                 }
