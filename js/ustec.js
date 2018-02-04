@@ -104,10 +104,10 @@ var App = new Vue({
                 if(this.entries[i].pk == pk){        		
                     if (this.entries[i].body != ''){
                         // If entry has body, show summary as title and body
-                        this.entry_text = "<h2>" + this.entries[i].summary + "</h2>" + this.entries[i].body;
-                    } else {
-                        // If entry has no body, show only summary
-                        this.entry_text = this.entries[i].summary;
+                        this.entry_text = "<h2>" + 
+                                          this.entries[i].summary + 
+                                          "</h2>" + 
+                                          this.entries[i].body;
                     }
                     break;
                 }
