@@ -64,6 +64,10 @@ var App = new Vue({
             $.getJSON(important_entries_URL, function(data) {
                 self.entries = data;
                 // Add host to images URL
+                // HTML with an embedded image is sent with the following format:
+                // <img src="/media/.../image_name.png" ... />
+                // Image will be get from server, we must compose the whole URL:
+                // <img src="http://main.sindicat.net/media/.../image_name.png" ... />
                 for (i=0; i< self.entries.length; i++){
                     self.entries[i].summary = self.entries[i].summary.replace("/media", protocol + host + "/media");
                     self.entries[i].body = self.entries[i].body.replace("/media", protocol + host + "/media");
@@ -123,6 +127,7 @@ var App = new Vue({
             // Show menu
             this.$refs.rightSidenav.open();
         },
+        // Refresh list of entries and close menu
         refresh_close_menu: function(){
             this.refresh();
             this.$refs.rightSidenav.close();
