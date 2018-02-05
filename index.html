@@ -26,7 +26,7 @@
 			<span style="flex: 1" v-on:click="go_home" v-if="entries_list_visible">
 				<img src="img/logo_ustec_transparent_small.png" />
 			</span>
-			<md-button class="md-icon-button" v-on:click="filter" v-if="entries_list_visible">
+			<md-button class="md-icon-button" v-on:click="open_menu" v-if="entries_list_visible">
 				<md-icon class="md-size-2x">more_vert</md-icon>
 			</md-button>
 			<md-button class="md-icon-button" v-on:click="go_home" v-if="entry_visible">
@@ -131,7 +131,7 @@
 		</md-sidenav>
 		<div id="entries-list" class="main-content" v-if="entries_list_visible">
 			<div v-for="entry in entries">			    
-			    <div v-if="show_entry(entry)">
+			    <div v-if="visible_entry(entry)">
 			    	<hr>
 				    <div v-if="entry.body != ''" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
 				    	<div v-for="tag in entry.tags">

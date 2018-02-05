@@ -123,7 +123,7 @@ var App = new Vue({
             this.entry_visible = false;
         },
         // Open menu
-        filter: function () {
+        open_menu: function () {
             // Show menu
             this.$refs.rightSidenav.open();
         },
@@ -134,7 +134,7 @@ var App = new Vue({
         },
         // Check if an entry must be visible or not,
         // depending on the filters (tags checked or not)
-        show_entry: function(entry){
+        visible_entry: function(entry){
             // Loop all tags of this entry
             for(i=0; i<entry.tags.length; i++){
                 // Loop all tags
