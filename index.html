@@ -68,7 +68,7 @@
 		<div id="entries-list" class="main-content" v-if="entries_list_visible">
 			<div v-for="entry in entries">			    
 			    <div v-if="visible_entry(entry)">
-			    	<hr>
+			    	<hr />
 				    <div v-if="entry.body != ''" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
 				    	<div v-for="tag in entry.tags">
 							<div class="tag tag_entry" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
@@ -83,7 +83,7 @@
 					</div>
 				</div>
 			</div>
-			<hr>
+			<hr />
 		</div>
 		<div id="entry" class="main-content" v-if="entry_visible">
 			<div v-html="entry_text"></div>
