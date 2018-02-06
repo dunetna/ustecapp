@@ -43,68 +43,7 @@
 				</md-button>
 				<md-button class="md-fab md-mini md-primary" v-on:click="refresh_close_menu">
 					<md-icon>cached</md-icon>
-				</md-button>
-				<md-dialog ref="infodialog">
-					<md-dialog-title>USTECApp</md-dialog-title>
-					<md-dialog-content>
-						<p>Versió 0.1</p>
-						<p><strong>USTECApp</strong> és una aplicació que notifica d'aquells esdeveniments 
-						més importants relacionats amb el professorat. Es poden filtrar les notícies segons 
-						els interessos de l'usuari.</p>
-						<p>Si voleu més informació i totes les notícies que publica USTEC visita la nostra
-						pàgina web: <a href="http://sindicat.net">http://sindicat.net</a></p>
-						<p>
-							<a href="https://espacioseguro.com/sindicat/afilia.php">
-								<img src="img/afiliat.png" />
-							</a>
-						</p>			
-					</md-dialog-content>					
-					<md-dialog-actions>						
-						<md-button class="md-primary" @click="closeDialog('infodialog')">Ok</md-button>
-					</md-dialog-actions>
-				</md-dialog>
-				<md-dialog ref="contactdialog">
-  					<md-dialog-title>Contacte</md-dialog-title>
-					<md-dialog-content>
-						<a href="mailto:barcelona@sindicat.net">
-							<md-button class="md-fab md-mini md-primary">
-								<md-icon>email</md-icon>
-							</md-button>
-							Barcelona
-						</a>
-						<br />
-						<a href="mailto:girona@sindicat.net">
-							<md-button class="md-fab md-mini md-primary">
-								<md-icon>email</md-icon>
-							</md-button>
-							Girona
-						</a>
-						<br />
-						<a href="mailto:lleida@sindicat.net">
-							<md-button class="md-fab md-mini md-primary">
-								<md-icon>email</md-icon>
-							</md-button>
-							Lleida
-						</a>
-						<br />
-						<a href="mailto:tarragona@sindicat.net">
-							<md-button class="md-fab md-mini md-primary">
-								<md-icon>email</md-icon>
-							</md-button>
-							Tarragona
-						</a>
-						<br />
-						<a href="mailto:tortosa@sindicat.net">
-							<md-button class="md-fab md-mini md-primary">
-								<md-icon>email</md-icon>
-							</md-button>
-							Tortosa
-						</a>
-					</md-dialog-content>					
-					<md-dialog-actions>						
-						<md-button class="md-primary" @click="closeDialog('contactdialog')">Ok</md-button>
-					</md-dialog-actions>
-				</md-dialog>
+				</md-button>				
 			</div>
 	        <md-toolbar class="md-dense">
 	      		<div class="md-toolbar-container">
@@ -151,6 +90,67 @@
 		<div id="entry" class="main-content" v-if="entry_visible">
 			<div v-html="entry_text"></div>
 		</div>
+		<md-dialog ref="infodialog">
+				<md-dialog-title>USTECApp</md-dialog-title>
+				<md-dialog-content>
+					<p>Versió 0.1</p>
+					<p><strong>USTECApp</strong> és una aplicació que notifica d'aquells esdeveniments 
+					més importants relacionats amb el professorat. Es poden filtrar les notícies segons 
+					els interessos de l'usuari.</p>
+					<p>Si voleu més informació i totes les notícies que publica USTEC visita la nostra
+					pàgina web: <a href="http://sindicat.net">http://sindicat.net</a></p>
+					<p>
+						<a href="https://espacioseguro.com/sindicat/afilia.php">
+							<img src="img/afiliat.png" />
+						</a>
+					</p>			
+				</md-dialog-content>					
+				<md-dialog-actions>						
+					<md-button class="md-primary" @click="closeDialog('infodialog')">Ok</md-button>
+				</md-dialog-actions>
+		</md-dialog>
+		<md-dialog ref="contactdialog">
+			<md-dialog-title>Contacte</md-dialog-title>
+			<md-dialog-content>
+				<a href="mailto:barcelona@sindicat.net">
+					<md-button class="md-fab md-mini md-primary">
+						<md-icon>email</md-icon>
+					</md-button>
+					Barcelona
+				</a>
+				<br />
+				<a href="mailto:girona@sindicat.net">
+					<md-button class="md-fab md-mini md-primary">
+						<md-icon>email</md-icon>
+					</md-button>
+					Girona
+				</a>
+				<br />
+				<a href="mailto:lleida@sindicat.net">
+					<md-button class="md-fab md-mini md-primary">
+						<md-icon>email</md-icon>
+					</md-button>
+					Lleida
+				</a>
+				<br />
+				<a href="mailto:tarragona@sindicat.net">
+					<md-button class="md-fab md-mini md-primary">
+						<md-icon>email</md-icon>
+					</md-button>
+					Tarragona
+				</a>
+				<br />
+				<a href="mailto:tortosa@sindicat.net">
+					<md-button class="md-fab md-mini md-primary">
+						<md-icon>email</md-icon>
+					</md-button>
+					Tortosa
+				</a>
+			</md-dialog-content>					
+			<md-dialog-actions>						
+				<md-button class="md-primary" @click="closeDialog('contactdialog')">Ok</md-button>
+			</md-dialog-actions>
+		</md-dialog>
 	</div>
 	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 	<script src="js/ustec.js" type="text/javascript"></script>
