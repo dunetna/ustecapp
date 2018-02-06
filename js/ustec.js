@@ -21,7 +21,7 @@
  */
 
 var protocol = 'http://'
-    var host = 'main.sindicat.net'
+    var host = 'localhost:8000'
         var important_entries_URL = protocol + host + '/json/important_entries';
 var tags_URL = protocol + host + '/json/tags';
 
@@ -122,9 +122,7 @@ var App = new Vue({
             this.entries_list_visible = true;
             this.entry_visible = false;
         },
-        // Open menu
         open_menu: function () {
-            // Show menu
             this.$refs.rightSidenav.open();
         },
         // Refresh list of entries and close menu
