@@ -1,42 +1,48 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="net.sindicat.ustecapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>USTECapp</name>
-    <description>
-        An app that provides the most important news from USTEC
-    </description>
-    <author email="monica@sindicat.net" href="http://sindicat.net">
-        Mònica Ramírez Arceda
-    </author>
-    <content src="index.html" />
-    <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="14" />
-    <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
-    <plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
-    <icon src="www/img/logo_ustec.png" />
-    <platform name="android">
-	    <splash src="www/img/splash_ustec.png" density="land-hdpi"/>
-	    <splash src="www/img/splash_ustec.png" density="land-ldpi"/>
-	    <splash src="www/img/splash_ustec.png" density="land-mdpi"/>
-	    <splash src="www/img/splash_ustec.png" density="land-xhdpi"/>	
-	    <splash src="www/img/splash_ustec.png" density="port-hdpi"/>
-	    <splash src="www/img/splash_ustec.png" density="port-ldpi"/>
-	    <splash src="www/img/splash_ustec.png" density="port-mdpi"/>
-	    <splash src="www/img/splash_ustec.png" density="port-xhdpi"/>
-</platform>
-    <preference name = "SplashScreen" value = "screen" />    
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <allow-navigation href="*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
+<widget id="net.sindicat.ustecapp" version="1.0.0"
+	xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+	<name>USTECapp</name>
+	<description>
+		An app that provides the most important news from USTEC
+	</description>
+	<author email="monica@sindicat.net" href="http://sindicat.net">
+		Mònica Ramírez Arceda
+	</author>
+
+	<preference name="DisallowOverscroll" value="true" />
+	<preference name="android-minSdkVersion" value="14" />
+
+	<content src="index.html" />
+	<icon src="www/img/logo_ustec.png" />
+
+	<plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
+	<preference name="SplashScreen" value="screen" />
+	<platform name="android">
+		<splash src="www/img/splash_ustec.png" density="land-hdpi" />
+		<splash src="www/img/splash_ustec.png" density="land-ldpi" />
+		<splash src="www/img/splash_ustec.png" density="land-mdpi" />
+		<splash src="www/img/splash_ustec.png" density="land-xhdpi" />
+		<splash src="www/img/splash_ustec.png" density="port-hdpi" />
+		<splash src="www/img/splash_ustec.png" density="port-ldpi" />
+		<splash src="www/img/splash_ustec.png" density="port-mdpi" />
+		<splash src="www/img/splash_ustec.png" density="port-xhdpi" />
+	</platform>
+
+	<plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
+	<access origin="*" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<allow-intent href="tel:*" />
+	<allow-intent href="sms:*" />
+	<allow-intent href="mailto:*" />
+	<allow-intent href="geo:*" />
+	<allow-navigation href="*" />
+
+	<platform name="android">
+		<allow-intent href="market:*" />
+	</platform>
+	<platform name="ios">
+		<allow-intent href="itms:*" />
+		<allow-intent href="itms-apps:*" />
+	</platform>
 </widget>
