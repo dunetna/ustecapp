@@ -11,8 +11,19 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
+    <plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
     <icon src="www/img/logo_ustec.png" />
-    <splash src="www/img/splash_ustec.png" />    
+    <platform name="android">
+	    <splash src="www/img/splash_ustec.png" density="land-hdpi"/>
+	    <splash src="www/img/splash_ustec.png" density="land-ldpi"/>
+	    <splash src="www/img/splash_ustec.png" density="land-mdpi"/>
+	    <splash src="www/img/splash_ustec.png" density="land-xhdpi"/>	
+	    <splash src="www/img/splash_ustec.png" density="port-hdpi"/>
+	    <splash src="www/img/splash_ustec.png" density="port-ldpi"/>
+	    <splash src="www/img/splash_ustec.png" density="port-mdpi"/>
+	    <splash src="www/img/splash_ustec.png" density="port-xhdpi"/>
+</platform>
+    <preference name = "SplashScreen" value = "screen" />    
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
