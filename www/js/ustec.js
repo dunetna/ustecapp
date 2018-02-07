@@ -21,7 +21,7 @@
  */
 
 var protocol = 'http://'
-    var host = 'localhost:8000'
+    var host = '192.168.100.10:8000'
         var important_entries_URL = protocol + host + '/json/important_entries';
 var tags_URL = protocol + host + '/json/tags';
 
