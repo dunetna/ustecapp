@@ -17,6 +17,7 @@
 
 	<plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
 	<preference name="SplashScreen" value="screen" />
+	<splash src="www/img/splash_ustec.png" />
 	<platform name="android">
 		<splash src="www/img/splash_ustec.png" density="land-hdpi" />
 		<splash src="www/img/splash_ustec.png" density="land-ldpi" />
