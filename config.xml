@@ -33,7 +33,6 @@
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="mailto:*" />
-    <allow-navigation href="*" />
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
