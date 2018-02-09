@@ -22,7 +22,7 @@
 
 var protocol = 'http://'
     var host = 'main.sindicat.net'
-        var important_entries_URL = protocol + host + '/json/important_entries';
+        var important_entries_URL = protocol + host + '/json/app_entries';
 var tags_URL = protocol + host + '/json/tags';
 
 Vue.use(VueMaterial)
