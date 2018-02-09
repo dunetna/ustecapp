@@ -40,7 +40,8 @@ Vue.material.registerTheme('default', {
 var App = new Vue({
     el: '#app',
     data: {
-        entries: [],
+        featured_entries: [],
+        normal_entries: [],
         entry_text: "", // current clicked entry
         tags: [], 
         entries_list_visible: true, // flag that indicates if we are in main page
@@ -62,16 +63,27 @@ var App = new Vue({
             var self = this;
             // Get all entries from server
             $.getJSON(important_entries_URL, function(data) {
-                self.entries = data;
+                entries = data;
                 // Add host to images URL
                 // HTML with an embedded image is sent with the following format:
                 // <img src="/media/.../image_name.png" ... />
                 // Image will be get from server, we must compose the whole URL:
                 // <img src="http://main.sindicat.net/media/.../image_name.png" ... />
-                for (i=0; i< self.entries.length; i++){
-                    self.entries[i].summary = self.entries[i].summary.replace("/media", protocol + host + "/media");
-                    self.entries[i].body = self.entries[i].body.replace("/media", protocol + host + "/media");
+                for (i=0; i< entries.length; i++){
+                    entries[i].summary = entries[i].summary.replace("/media", protocol + host + "/media");
+                    entries[i].body = entries[i].body.replace("/media", protocol + host + "/media");
                 }
+                // Split entries in two arrays: one with featured entries and the other one 
+                // with the rest of entries
+                self.featured_entries = []
+                self.normal_entries = []
+                for (i=0; i< entries.length; i++){
+                    if(entries[i].is_featured){
+                        self.featured_entries.push(entries[i]);
+                    }else{
+                        self.normal_entries.push(entries[i]);
+                    }
+                }                
             });
         },
         get_tags: function(){
