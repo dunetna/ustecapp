@@ -33,7 +33,7 @@
                 <md-icon class="md-size-2x">arrow_back</md-icon>
             </md-button>
         </md-toolbar>
-        <md-sidenav class="md-right" v-on:close="save_filters" ref="rightSidenav">
+        <md-sidenav class="md-right" ref="rightSidenav">
             <div id="buttons" style="text-align: center">
                 <md-button class="md-fab md-mini md-primary" v-on:click="openDialog('infodialog')">
                     <md-icon>info</md-icon>
@@ -58,7 +58,7 @@
                             </md-switch>
                         </div>
                         <div v-else>
-                            <md-switch v-model="tag.checked" v-bind:id="tag.name" class="md-primary" v-on:change="refresh_list">
+                            <md-switch v-model="tag.checked" v-bind:id="tag.name" class="md-primary" v-on:change="save_refresh(tag.name, $event)">
                                 <span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
                             </md-switch>
                         </div>

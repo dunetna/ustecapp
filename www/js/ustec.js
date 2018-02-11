@@ -167,6 +167,16 @@ var App = new Vue({
         save_filters: function(){
             localStorage.setItem("tags", JSON.stringify(this.tags));
         },
+        save_refresh: function(tag_name, value){
+            // Update the filter value
+            for (i=0; i<this.tags.length; i++){
+                if(this.tags[i].name == tag_name){
+                    this.tags[i].checked = value;
+                }
+            }
+            this.save_filters();
+            this.refresh_list();
+        },
         openDialog(ref) {
             this.$refs[ref].open();
         },
