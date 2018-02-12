@@ -67,8 +67,7 @@
         </md-sidenav>
         <div id="entries-list" class="main-content" v-if="entries_list_visible">
             <div v-for="entry in featured_entries">                           
-                <div v-if="visible_entry(entry)">
-                    <hr />
+                <div class="entry" v-if="visible_entry(entry)">
                     <div v-if="entry.body != ''" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
                         <div v-for="tag in entry.tags">
                             <div class="tag tag_entry" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
@@ -86,8 +85,7 @@
                 </div>
             </div>
             <div v-for="entry in normal_entries">
-                <div v-if="visible_entry(entry)">
-                    <hr />
+                <div class="entry" v-if="visible_entry(entry)">
                     <div v-if="entry.body != ''" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
                         <div v-for="tag in entry.tags">
                             <div class="tag tag_entry" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</div>
@@ -101,8 +99,7 @@
                         <span v-html="entry.summary"></span>
                     </div>
                 </div>
-            </div>            
-            <hr />
+            </div>
         </div>
         <div id="entry" class="main-content" v-if="entry_visible">
             <div v-html="entry_text"></div>

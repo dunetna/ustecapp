@@ -3,9 +3,11 @@
 	margin: 15px auto 0;
 }
 
-hr {
-	color: #af7e55;
+.entry {
+	overflow:auto;
 	clear: both;
+	border-bottom: solid #af7e55 thin;
+	padding: 5px 0;
 }
 
 .tag{
