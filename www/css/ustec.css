@@ -18,6 +18,9 @@
 
 .tag_entry{
 	float: left;
+	height: 2em;
+	width: 2em;
+	border-radius: 25px;
 }
 
 .tag_filter{
