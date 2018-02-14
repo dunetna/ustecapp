@@ -56,3 +56,9 @@
 .md-dialog-content p {
 	margin-bottom: 1em;
 }
+
+.md-spinner {
+	position: fixed;
+    top: 25%;
+    left: 40%;
+}
