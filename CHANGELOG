@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3 - 2018-02-13
+- Show tags in entries list with color circles
+- Show features news with a background color and bigger font size
+- Beautify tags in menu
+- Control network errors
+
 ## 0.2 - 2018-02-11 
 - Logo corners rounded
 - Improve info text
