@@ -46,7 +46,7 @@ var App = new Vue({
         tags: [], 
         entries_list_visible: true, // flag that indicates if we are in main page
         entry_visible: false, // flag that indicates if we are viewing an entry
-        loaded_list: true,
+        loading_list: true,
     },
     mounted() {
         this.refresh();
@@ -87,7 +87,7 @@ var App = new Vue({
                     }
                 }                
             })
-            .done(function() { self.loaded_list = false });
+            .done(function() { self.loading_list = false });
         },
         get_tags: function(){
             var self = this;
