@@ -46,6 +46,7 @@ var App = new Vue({
         tags: [], 
         entries_list_visible: true, // flag that indicates if we are in main page
         entry_visible: false, // flag that indicates if we are viewing an entry
+        loaded_list: true,
     },
     mounted() {
         this.refresh();
@@ -61,6 +62,7 @@ var App = new Vue({
         },
         get_entries: function(){
             var self = this;
+            self.loaded_list = true;
             // Get all entries from server
             $.getJSON(important_entries_URL, function(data) {
                 entries = data;
@@ -84,7 +86,8 @@ var App = new Vue({
                         self.normal_entries.push(entries[i]);
                     }
                 }                
-            });
+            })
+            .done(function() { self.loaded_list = false });
         },
         get_tags: function(){
             var self = this;

@@ -66,6 +66,7 @@
             </div>
         </md-sidenav>
         <div id="entries-list" class="main-content" v-if="entries_list_visible">
+            <md-spinner md-indeterminate v-if="loaded_list"></md-spinner>
             <div v-for="entry in featured_entries">                           
                 <div class="entry featured" v-if="visible_entry(entry)">
                     <div v-if="entry.body != ''" class="featured" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
