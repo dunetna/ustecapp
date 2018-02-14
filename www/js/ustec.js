@@ -46,8 +46,8 @@ var App = new Vue({
         tags: [], 
         entries_list_visible: true, // flag that indicates if we are in main page
         entry_visible: false, // flag that indicates if we are viewing an entry
-        loading_list: true,
-        load_error: false,
+        loading_list: true, //flag that indicates if entries list is loading
+        load_error: false, //flag that indicates if access to server is possible
     },
     mounted() {
         this.refresh();
