@@ -24,8 +24,8 @@
 
 .tag_entry{
 	float: left;
-	height: 2em;
-	width: 2em;
+	height: 30px;
+	width: 30px;
 	border-radius: 25px;
 }
 
