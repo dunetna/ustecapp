@@ -88,14 +88,9 @@ var App = new Vue({
                     }
                 }                
             })
-            .done(function() { 
-                self.loading_list = false;
-                self.load_error = false;
-             })
-            .fail(function() { 
-                self.loading_list = false;
-                self.load_error = true;
-            });
+            .done(function() { self.load_error = false; })
+            .fail(function() { self.load_error = true; })
+            .always(function() { self.loading_list = false; });
         },
         get_tags: function(){
             var self = this;
