@@ -47,6 +47,7 @@ var App = new Vue({
         entries_list_visible: true, // flag that indicates if we are in main page
         entry_visible: false, // flag that indicates if we are viewing an entry
         loading_list: true,
+        load_error: false,
     },
     mounted() {
         this.refresh();
@@ -87,7 +88,14 @@ var App = new Vue({
                     }
                 }                
             })
-            .done(function() { self.loading_list = false });
+            .done(function() { 
+                self.loading_list = false;
+                self.load_error = false;
+             })
+            .fail(function() { 
+                self.loading_list = false;
+                self.load_error = true;
+            });
         },
         get_tags: function(){
             var self = this;

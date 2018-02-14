@@ -67,6 +67,10 @@
         </md-sidenav>
         <div id="entries-list" class="main-content" v-if="entries_list_visible">
             <md-spinner md-indeterminate v-if="loading_list"></md-spinner>
+            <p class="error" v-if="load_error">No s'han pogut obtenir les notícies.<br /> 
+            Teniu connexió a Internet?<br /><br />
+            Si disposeu de connexió, devem tenir un problema al servidor, disculpeu les 
+            molèsties i intenteu-ho més tard.</p>
             <div v-for="entry in featured_entries">                           
                 <div class="entry featured" v-if="visible_entry(entry)">
                     <div v-if="entry.body != ''" class="featured" v-on:click="get_entry(entry.pk)" v-bind:id="'e' + entry.pk">
