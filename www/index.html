@@ -38,7 +38,7 @@
                 <md-button class="md-fab md-mini md-primary" v-on:click="openDialog('infodialog')">
                     <md-icon>info</md-icon>
                 </md-button>
-                <md-button class="md-fab md-mini md-primary" v-on:click="openDialog('contactdialog')">
+                <md-button class="md-fab md-mini md-primary" v-on:click="openDialog('maildialog')">
                     <md-icon>email</md-icon>
                 </md-button>
                 <md-button class="md-fab md-mini md-primary" v-on:click="refresh_close_menu">
@@ -127,8 +127,8 @@
                     <md-button class="md-primary" v-on:click="closeDialog('infodialog')">Ok</md-button>
                 </md-dialog-actions>
         </md-dialog>
-        <md-dialog ref="contactdialog">
-            <md-dialog-title>Contacte</md-dialog-title>
+        <md-dialog ref="maildialog">
+            <md-dialog-title>Correus electrònics</md-dialog-title>
             <md-dialog-content>
                 <a href="mailto:barcelona@sindicat.net">
                     <md-button class="md-fab md-mini md-primary">
