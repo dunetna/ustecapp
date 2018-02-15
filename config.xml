@@ -13,7 +13,6 @@
     <icon src="www/img/logo_ustec.png" />
     <plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
     <preference name="SplashScreen" value="screen" />
-    <splash src="www/img/splash_ustec.png" />
     <platform name="android">
         <splash density="port-ldpi" src="res/screen/android/splash-port-ldpi.png" />
         <splash density="port-mdpi" src="res/screen/android/splash-port-mdpi.png" />
