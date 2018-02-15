@@ -35,6 +35,9 @@
         </md-toolbar>
         <md-sidenav class="md-right" ref="rightSidenav">
             <div id="buttons" style="text-align: center">
+            <md-button class="md-fab md-mini md-primary" v-on:click="refresh_close_menu">
+                    <md-icon>cached</md-icon>
+                </md-button>
                 <md-button class="md-fab md-mini md-primary" v-on:click="openDialog('infodialog')">
                     <md-icon>info</md-icon>
                 </md-button>
@@ -44,9 +47,6 @@
                 <md-button class="md-fab md-mini md-primary" v-on:click="openDialog('phonedialog')">
                     <md-icon>phone</md-icon>
                 </md-button>
-                <md-button class="md-fab md-mini md-primary" v-on:click="refresh_close_menu">
-                    <md-icon>cached</md-icon>
-                </md-button>                
             </div>
             <md-toolbar class="md-dense">
                   <div class="md-toolbar-container">
