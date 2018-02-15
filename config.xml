@@ -10,7 +10,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <content src="index.html" />
-    <icon src="www/img/logo_ustec.png" />
+    <icon src="res/logo_ustec.png" />
     <plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
     <preference name="SplashScreen" value="screen" />
     <platform name="android">
