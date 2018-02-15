@@ -168,7 +168,11 @@
                     tortosa@sindicat.net
                 </a>
             </md-dialog-content>
-            <md-dialog ref="phonedialog">
+            <md-dialog-actions>
+                <md-button class="md-primary" v-on:click="closeDialog('contactdialog')">Ok</md-button>
+            </md-dialog-actions>
+        </md-dialog>
+        <md-dialog ref="phonedialog">
             <md-dialog-title>Telèfons</md-dialog-title>
             <md-dialog-content>
                 <a href="tel:933027606">
@@ -207,7 +211,7 @@
                 </a>
             </md-dialog-content>                    
             <md-dialog-actions>                        
-                <md-button class="md-primary" v-on:click="closeDialog('contactdialog')">Ok</md-button>
+                <md-button class="md-primary" v-on:click="closeDialog('phonedialog')">Ok</md-button>
             </md-dialog-actions>
         </md-dialog>
     </div>
