@@ -107,7 +107,10 @@ var App = new Vue({
                         }
                     }
                 }
-            });
+            })
+            .done(function() { self.load_error = false; })
+            .fail(function() { self.load_error = true; });
+;
         },
         reset_filters: function () {
             // Add an attribute to each tag in filters to set if they are
