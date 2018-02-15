@@ -41,6 +41,9 @@
                 <md-button class="md-fab md-mini md-primary" v-on:click="openDialog('maildialog')">
                     <md-icon>email</md-icon>
                 </md-button>
+                <md-button class="md-fab md-mini md-primary" v-on:click="openDialog('phonedialog')">
+                    <md-icon>phone</md-icon>
+                </md-button>
                 <md-button class="md-fab md-mini md-primary" v-on:click="refresh_close_menu">
                     <md-icon>cached</md-icon>
                 </md-button>                
@@ -163,6 +166,44 @@
                         <md-icon>email</md-icon>
                     </md-button>
                     tortosa@sindicat.net
+                </a>
+            </md-dialog-content>
+            <md-dialog ref="phonedialog">
+            <md-dialog-title>Telèfons</md-dialog-title>
+            <md-dialog-content>
+                <a href="tel:933027606">
+                    <md-button class="md-fab md-mini md-primary">
+                        <md-icon>phone</md-icon>
+                    </md-button>
+                    Barcelona
+                </a>
+                <br />
+                <a href="tel:972202034">
+                    <md-button class="md-fab md-mini md-primary">
+                        <md-icon>phone</md-icon>
+                    </md-button>
+                    Girona
+                </a>
+                <br />
+                <a href="tel:973263032">
+                    <md-button class="md-fab md-mini md-primary">
+                        <md-icon>phone</md-icon>
+                    </md-button>
+                    Lleida
+                </a>
+                <br />
+                <a href="tel:977235263">
+                    <md-button class="md-fab md-mini md-primary">
+                        <md-icon>phone</md-icon>
+                    </md-button>
+                    Tarragona
+                </a>
+                <br />
+                <a href="tel:977511046">
+                    <md-button class="md-fab md-mini md-primary">
+                        <md-icon>phone</md-icon>
+                    </md-button>
+                    Tortosa
                 </a>
             </md-dialog-content>                    
             <md-dialog-actions>                        
