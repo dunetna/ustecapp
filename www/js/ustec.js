@@ -54,7 +54,7 @@ var App = new Vue({
         // Refresh news list every minute
         setInterval(function () {
             this.refresh();
-        }.bind(this), 60000);
+        }.bind(this), 900000);
     },
     methods: {
         refresh: function() {
