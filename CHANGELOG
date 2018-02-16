@@ -1,7 +1,12 @@
 # Changelog
 
-## Unreleased
+## 0.4 - 2018-02-16
 - Improve info and contact text
+- Add phones as a way of contact
+- Update library version
+- Use local fonts instead of CDN
+- Set refresh time to 15 minutes
+- Reduce sizes using minified javascripts and removing useless images
 
 ## 0.3 - 2018-02-13
 - Show tags in entries list with color circles
