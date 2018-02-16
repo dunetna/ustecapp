@@ -607,6 +607,7 @@ button:focus {
 }
 .md-button.md-icon-button .md-icon,
 .md-button.md-fab .md-icon {
+  color: inherit;
   display: block;
 }
 .md-fab.md-fab-top-left, .md-fab.md-fab-top-center, .md-fab.md-fab-top-right, .md-fab.md-fab-bottom-left, .md-fab.md-fab-bottom-center, .md-fab.md-fab-bottom-right,
@@ -5457,7 +5458,7 @@ to {
         min-width: 18px;
         height: 18px;
         min-height: 18px;
-        color: rgba(0, 0, 0, 0.54);
+        color: inherit;
         font-size: 18px;
 }
 .md-table .md-table-selection {
@@ -5479,6 +5480,7 @@ to {
 .md-table .md-table-selection .md-checkbox-container {
       width: 18px;
       height: 18px;
+      min-width: auto;
       margin-top: 1px;
 }
 .md-table .md-table-selection .md-checkbox-container:after {
