@@ -72,6 +72,17 @@
 	background-color: #ffb3ba;
 }
 
+/* Reduce area of sidenav content */
+
+.md-toolbar.md-dense{
+	min-height: 35px;
+}
+
+.md-switch{
+	margin-top: 11px;
+	margin-bottom: 11px;
+}
+
 /* Material fonts */
 /* See: http://google.github.io/material-design-icons/#getting-icons */
 /*      Setup Method 2. Self hosting */
