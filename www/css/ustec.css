@@ -6,12 +6,13 @@
 .entry {
 	overflow:auto;
 	clear: both;
-	border-bottom: solid #af7e55 thin;
+	border-bottom: solid #ccccca thin;
 	padding: 5px 5px;
 }
 
 .featured {
-	background-color: #eeffc6;
+	background-color: #ffeeee;
+	border-bottom-color: red;
 	font-size: 18px;
 }
 
