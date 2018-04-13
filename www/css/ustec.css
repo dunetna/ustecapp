@@ -19,15 +19,19 @@
 .tag{
 	width: 8em;
 	margin-right: 5px;
-	border-radius: 10px;
-	padding: 5px 10px;
 }
 
 .tag_entry{
 	float: left;
 	height: 30px;
 	width: 30px;
-	border-radius: 25px;
+	border-radius: 25px;		
+	padding: 5px 10px;
+}
+
+.tag_filter{
+	width: 165px;
+	border-bottom:  3px solid;
 }
 
 .back {

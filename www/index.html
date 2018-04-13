@@ -53,12 +53,12 @@
                 <div v-for="tag in tags">                    
                         <div v-if="tag.name == 'USTEC'">
                             <md-switch v-model="tag.checked" v-bind:id="tag.name" class="md-primary" disabled>
-                                <span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
+                                <div class="tag tag_filter" v-bind:style="'border-bottom-color: ' + tag.color">{{tag.name}}</div>
                             </md-switch>
                         </div>
                         <div v-else>
                             <md-switch v-model="tag.checked" v-bind:id="tag.name" class="md-primary" v-on:change="save_refresh(tag.name, $event)">
-                                <span class="tag tag_filter" v-bind:style="'background-color: ' + tag.color">{{tag.name}}</span>
+                                <div class="tag tag_filter" v-bind:style="'border-bottom-color: ' + tag.color">{{tag.name}}</div>
                             </md-switch>
                         </div>
                 </div>
