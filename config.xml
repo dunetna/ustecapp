@@ -1,9 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="net.sindicat.ustecapp" version="0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>USTECapp</name>
-    <description>
-		An app that provides the most important news from USTEC
-	</description>
+    <name>USTECSTEsApp</name>
+    <description>An app that provides the most important news from USTEC·STEs</description>
     <author email="monica@sindicat.net" href="http://sindicat.net">
 		Mònica Ramírez Arceda
 	</author>
