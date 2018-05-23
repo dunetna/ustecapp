@@ -1,0 +1,1 @@
+[{"name":"8fc2b97eb8eae1331b3f834072146b64e290e775","index":0,"scopes":["PROJECT"],"types":["DEX"],"format":"JAR","present":true},{"name":":CordovaLib","index":1,"scopes":["SUB_PROJECTS"],"types":["DEX"],"format":"JAR","present":true},{"name":"f5cf19cf2a976cfa8d97137f3392a5acf765658b","index":2,"scopes":["EXTERNAL_LIBRARIES"],"types":["DEX"],"format":"JAR","present":true}]

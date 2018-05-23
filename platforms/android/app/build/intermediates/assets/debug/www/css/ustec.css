@@ -1,0 +1,128 @@
+.main-content{
+	width:90%;
+	margin: 15px auto 0;
+}
+
+.entry {
+	overflow:auto;
+	clear: both;
+	border-bottom: solid #ccccca thin;
+	padding: 5px 5px;
+}
+
+.featured {
+	background-color: #ffeeee;
+	border-bottom-color: red;
+	font-size: 18px;
+}
+
+.tag{
+	width: 8em;
+	margin-right: 5px;
+}
+
+.tag_entry{
+	float: left;
+	height: 30px;
+	width: 30px;
+	border-radius: 25px;		
+	padding: 5px 10px;
+}
+
+.tag_filter{
+	width: 165px;
+	border-bottom:  3px solid;
+}
+
+.back {
+	text-align: right;
+}
+
+.md-sidenav-content {
+	max-width: 70% !important;
+}
+
+/* Prevent scroll horizontally to view menu when it's not loaded */
+#app{
+	overflow-x: hidden;
+	position:relative;
+	height:100vh;
+}
+
+/* Make image button 100% visible */
+.md-button{
+	overflow: visible;
+	vertical-align: middle;
+}
+
+/* To see tag background with normal height */ 
+.md-switch .md-switch-label {
+	line-height: normal;
+}
+
+.md-dialog-content p {
+	margin-bottom: 1em;
+}
+
+.md-spinner {
+	position: fixed;
+    top: 25%;
+    left: 40%;
+}
+
+.error {
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #ffb3ba;
+}
+
+/* Reduce area of sidenav content */
+
+.md-toolbar.md-dense{
+	min-height: 35px;
+}
+
+.md-switch{
+	margin-top: 11px;
+	margin-bottom: 11px;
+}
+
+/* Material fonts */
+/* See: http://google.github.io/material-design-icons/#getting-icons */
+/*      Setup Method 2. Self hosting */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(../iconfont//MaterialIcons-Regular.woff2) format('woff2'),
+    url(../iconfont/MaterialIcons-Regular.woff) format('woff'),
+    url(../iconfont//MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
